@@ -1,4 +1,6 @@
 class UserAuthenticationsController < Spree::BaseController
+  ssl_required
+  helper_method :ssl_supported?
 
   def update
     @user = User.find(params[:id])
