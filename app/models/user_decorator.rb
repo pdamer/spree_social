@@ -1,7 +1,7 @@
 User.class_eval do
   token_resource
 
-  has_many :user_authentications
+  has_many :user_authentications, :dependent => :destroy
 
   # Associates user to auth source
   def associate_auth(source)
